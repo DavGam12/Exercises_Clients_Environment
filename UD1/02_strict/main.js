@@ -1,5 +1,5 @@
 "use strict"
 
-x = 10
+const x = 10;
 
-console.log('el valor de X ' + x)
+console.log('el valor de X ' + x);

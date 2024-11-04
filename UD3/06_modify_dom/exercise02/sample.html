@@ -4,13 +4,21 @@
 <title>DOM básico</title>
 <script type="text/javascript">
 window.onload = function() {
-	// Numero de enlaces de la pagina
+	let hrefPruebaNum = 0;
+	console.log(Array.from(document.getElementsByTagName('a')));
 
-	// Direccion del penultimo enlace
+	console.log(Array.from(document.getElementsByTagName('a'))[5].href);
 
-	// Numero de enlaces que apuntan a http://prueba
+	Array.from(document.getElementsByTagName('a')).forEach(el =>
+	{
+		el.href === 'http://prueba/' ? hrefPruebaNum++ : false ;
+	})
+	console.log(`Number links http://prueba/ : ${hrefPruebaNum}`);
 
-	// Numero de enlaces del tercer párrafo
+	console.log(Array.from(document.querySelectorAll('p a')));
+
+	const parDiv = document.body.appendChild(document.createElement('div').appendChild(document.createElement('p')));
+	parDiv.textContent = 'This is a Paragraph inside a Div';
 
 }
 </script>
